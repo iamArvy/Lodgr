@@ -18,12 +18,14 @@ django-timezone-field==7.1
 djangorestframework==3.16.1
 drf-nested-routers==0.94.2
 drf-yasg==1.21.10
+gunicorn==23.0.0
 idna==3.10
 inflection==0.5.1
 kombu==5.5.4
 mysqlclient==2.2.7
 packaging==25.0
 prompt_toolkit==3.0.52
+psycopg2-binary==2.9.10
 python-crontab==3.3.0
 python-dateutil==2.9.0.post0
 pytz==2025.2
