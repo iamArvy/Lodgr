@@ -20,13 +20,13 @@ class BookingViewSet(viewsets.ModelViewSet):
     serializer_class = BookingSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ["status", "listing", "user", "start_date", "end_date"]
+    filterset_fields = ["status", "property", "user", "start_date", "end_date"]
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        listing_id = self.kwargs.get("listing_pk")
-        if listing_id:
-            queryset = queryset.filter(listing_id=listing_id)
+        property_id = self.kwargs.get("property_pk")
+        if property_id:
+            queryset = queryset.filter(property_id=property_id)
         return queryset
 
     def perform_create(self, serializer):
