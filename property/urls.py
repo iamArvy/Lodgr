@@ -11,6 +11,8 @@ router.register(r"properties", PropertyViewSet)
 # Nested router
 properties_router = NestedDefaultRouter(router, r"properties", lookup="property")
 properties_router.register(r"bookings", BookingViewSet, basename="property-bookings")
+properties_router.register(r"reviews", ReviewViewSet, basename="property-reviews")
+
 # router = DefaultRouter()
 # router.register(r'listings', ListingViewSet)
 # router.register(r'bookings', BookingViewSet)
